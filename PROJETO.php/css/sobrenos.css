@@ -1,0 +1,318 @@
+
+:root {
+  --cor-texto-claro: #ffffff;
+  --cor-texto-escuro: #000000;
+  --fundo: #ffffff;
+  --cor-btn: #1b8836;
+  --cor-btn-hover: #18be18;
+  --sombra: #6e6e6e;
+  --menu-icon: #000000;
+
+}
+
+.darkmode {
+  --cor-texto-escuro: #eeeeee;
+  --cor-btn: #1b8836;
+  --cor-btn-hover: #18be18;
+  --sombra: #a1dfbd;
+  --menu-icon: #ffffff;
+  --fundo: #051101;
+
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: transparent;
+}
+
+body.darkmode {
+  background: linear-gradient(rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.5)), url("../img/fundo.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Header */
+
+
+#ModoEscuro {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+  background-color: var(--cor-btn);
+  color: var(--cor-texto-claro);
+  border-color: 1px solid var(--cor-texto-claro);
+  cursor: pointer;
+}
+
+#ModoEscuro i:last-child {
+  display: none;
+
+}
+
+.darkmode #ModoEscuro i:first-child {
+  display: none;
+
+}
+
+.darkmode #ModoEscuro i:last-child {
+  display: block;
+}
+
+#ModoEscuro:hover {
+  background-color: var(--cor-btn-hover);
+  transform: scale(1.10);
+  transition: 0.2s;
+}
+
+header {
+  width: 100%;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.font-buttons {
+  position: fixed;
+  top: 90px;
+  right: 10px;
+  z-index: 999;
+}
+
+.button-alterFont {
+
+  font-size: 18px;
+  background-color: var(--cor-btn);
+  color: var(--cor-texto-claro);
+  border-radius: 20%;
+
+}
+
+.button-alterFont:hover {
+  background-color: var(--cor-btn-hover);
+  transform: scale(1.10);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--cor-btn);
+  margin-left: 70px;
+  text-align: center;
+}
+
+/* Estilo da navegação */
+.nav-tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Links de Navegação */
+.nav-item .nav-link {
+  color: var(--cor-texto-escuro);
+  /* Cor do link no modo atual */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+/* Efeito ao passar o mouse nos links */
+.nav-item .nav-link:hover {
+  color: var(--cor-btn-hover);
+}
+
+.home-menu {
+  color: var(--cor-texto-escuro) !important;
+  background-color: transparent !important;
+}
+
+/* Estilo do menu dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border: 1px solid var(--sombraS);
+  padding: 10px 0;
+  min-width: 180px;
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  background-color: var(--fundo) !important;
+
+}
+
+/* Estilo dos links dentro do dropdown */
+.dropdown-item {
+  padding: 10px 20px;
+  background-color: var(--fundo) !important;
+  color: var(--cor-texto-escuro) !important;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.dropdown-item:hover {
+  background-color: var(--cor-texto-escuro) !important;
+  color: var(--cor-btn-hover) !important;
+}
+
+/* Estilo para o divisor do dropdown */
+.dropdown-divider {
+  height: 1px;
+  margin: 5px 0;
+}
+
+/* carousel de imagens*/
+.carousel-inner {
+  height: 24rem;
+}
+
+
+/* Estilo do botão */
+#login {
+  margin-left: 30px;
+  padding: 8px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--cor-texto-claro);
+  background-color: var(--cor-btn);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 70px;
+  font-weight: bold;
+}
+
+/* Efeito ao passar o mouse no botão */
+#login:hover {
+  background-color: var(--cor-btn-hover);
+  transform: scale(1.10);
+  transition: 0.3s;
+}
+
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Conteúdo principal */
+.sobre-nos {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.texto {
+  width: 90%;
+  max-width: 1200px;
+  /* Limite de largura */
+}
+
+.caixa-transparente {
+  background-color: var(--fundo);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px var(--sombra);
+  color: var(--cor-texto-escuro);
+}
+
+.caixa-transparente:hover {
+  box-shadow: 0 0 15px var(--sombra);
+}
+
+.caixa-transparente h1 {
+  margin-bottom: 1rem;
+  color: var(--cor-btn);
+}
+
+.caixa-transparente p {
+  line-height: 1.6;
+}
+
+.caixa-transparente ul {
+  padding-left: 1.2rem;
+  margin: 1rem 0;
+}
+
+/* Imagens */
+.imagens {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.imagens img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--sombra);
+  transition: transform 0.3s ease-in-out;
+}
+
+.imagens img:hover {
+  transform: scale(1.1);
+}
+
+/* Media queries para responsividade */
+@media (max-width: 992px) {
+  .nav-item {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+
+  .logo {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  #cadastro {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navigation {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .sobre-nos {
+    padding: 1rem;
+    margin-top: 30px;
+  }
+
+  .texto {
+    width: 100%;
+  }
+
+  .imagens img {
+    width: 90px;
+    height: 90px;
+  }
+}

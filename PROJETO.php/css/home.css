@@ -1,0 +1,342 @@
+:root{
+  --cor-texto-claro:#ffffff;
+  --cor-texto-escuro:#000000;
+  --fundo:#ffffff;
+  --cor-btn:#1b8836;
+  --cor-btn-hover: #18be18;
+  --sombra: #6e6e6e;
+  --menu-icon: #000000;
+  
+}
+
+.darkmode{
+  --cor-texto-escuro:#eeeeee;
+  --cor-btn:#1b8836;
+  --cor-btn-hover: #18be18;
+  --sombra: #a1dfbd;
+  --menu-icon:#ffffff;
+ --fundo:#051101;
+
+}
+
+
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: transparent;
+
+}
+html.darkmode body{
+  background-color: var(--fundo)!important;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+ background-color: var(--fundo) !important;
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify; 
+  color: var(--cor-texto-escuro); 
+  min-height: 100vh;
+}
+
+
+
+#ModoEscuro{
+width: 30px;
+height: 30px;
+padding: 0;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: 2rem;
+background-color: var(--cor-btn);
+color: var(--cor-texto-claro);
+border: 1px solid var(--cor-texto-claro);
+cursor: pointer;
+}
+
+#ModoEscuro i:last-child{
+  display: none;
+
+}
+
+.darkmode #ModoEscuro i:first-child{
+  display: none;
+
+}
+
+.darkmode #ModoEscuro i:last-child{
+  display: block;
+}
+
+#ModoEscuro:hover{
+  background-color: var(--cor-btn-hover);
+  transform: scale(1.10);
+  transition: 0.2s;
+}
+
+header {
+  width: 100%;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.font-buttons {
+  position: fixed;
+  top: 90px;
+  right: 10px;
+  z-index: 999;
+}
+
+.button-alterFont{
+
+font-size: 18px ;
+background-color: var(--cor-btn);
+color: var(--cor-texto-claro);
+border-radius: 20%;
+
+}
+
+.button-alterFont:hover{
+  background-color: var(--cor-btn-hover);
+  transform: scale(1.10);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--cor-btn);
+  margin-left: 70px;
+  text-align: center;
+}
+
+/* Estilo da navegação */
+.nav-tabs {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+}
+
+/* Links de Navegação */
+.nav-item .nav-link {
+  color: var(--cor-texto-escuro); /* Cor do link no modo atual */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+/* Efeito ao passar o mouse nos links */
+.nav-item .nav-link:hover {
+  color: var(--cor-btn-hover)!important;
+}
+
+.home-menu{
+  color: var(--cor-texto-escuro) !important;
+  background-color: var(--fundo) !important;
+}
+
+/* Estilo do menu dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  border: 1px solid var(--sombra);
+  padding: 10px 0;
+  min-width: 180px;
+  display: none; 
+  flex-direction: column;
+  z-index: 1000;
+  background-color: var(--fundo) !important;
+
+}
+
+/* Estilo dos links dentro do dropdown */
+.dropdown-item {
+  padding: 10px 20px;
+  background-color: var(--fundo)!important;
+  color: var(--cor-texto-escuro)!important;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.dropdown-item:hover {
+  background-color: var(--cor-texto-escuro)!important;
+  color: var(--cor-btn-hover)!important;
+}
+
+/* Estilo para o divisor do dropdown */
+.dropdown-divider {
+  height: 1px;
+  margin: 5px 0;
+}
+
+/* carousel de imagens*/
+.carousel-inner{
+  height: 34rem;
+   object-fit: cover;
+  width: 100%;
+  
+}
+
+
+  /* Estilo do botão */
+  #login {
+    margin-left: 30px; 
+    padding: 8px 20px; 
+    font-size: 16px; 
+    text-decoration: none;
+    color: var(--cor-texto-claro); 
+    background-color: var(--cor-btn); 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+    margin-right: 70px; 
+    font-weight: bold;
+  }
+
+  /* Efeito ao passar o mouse no botão */
+  #login:hover {
+    background-color: var(--cor-btn-hover); 
+    transform: scale(1.10);
+    transition: 0.3s;
+  }
+
+
+  .navigation {
+    display: flex; 
+    align-items: center; 
+  }
+
+  .texto-esquerda {
+    margin: 4rem;
+    padding: 3rem;
+    width: 60%;
+    text-align: left;
+    font-weight: bold;
+    background-color: var(--fundo);
+    box-shadow: 0 4px 10px var(--sombra);
+    border-radius: 20px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+
+.texto-esquerda h1 { 
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--cor-btn);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.texto-esquerda p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--cor-texto-escuro);
+    margin-left: 15px;
+}
+
+
+#btn-Contato {
+  background-color: var(--cor-btn);
+  color: var(--cor-texto-claro);
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#btn-Contato:hover {
+  background-color: var(--cor-btn-hover);
+  transform: scale(1.05);
+}
+
+/* RESPONSIVIDADE PARA TELAS MENORES */
+@media (max-width: 992px) {
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .logo{
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+
+  .navigation {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .nav-tabs{
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .nav-item{
+    margin: 5px 0;
+  }
+
+  #ModoEscuro{
+    margin: 10px 0;
+  }
+
+  #login {
+    width: 80%;
+    margin-right: 0;
+    padding: 10px;
+  }
+
+  .texto-esquerda {
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .texto-esquerda h1 {
+    font-size: 24px;
+  }
+
+  .texto-esquerda p {
+    font-size: 16px;
+    margin-left: 0;
+    text-align: justify;
+  }
+
+  #btn-contato{
+    margin-left: 0;
+  }
+
+  .dropdown-menu {
+  position: static;
+  border: none;
+  box-shadow: none;
+    
+  }
+
+  .dropdown-item{
+    padding-left: 40px;
+  }
+}
