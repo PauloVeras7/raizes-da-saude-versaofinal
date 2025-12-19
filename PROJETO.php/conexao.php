@@ -1,17 +1,20 @@
 <?php
-$servidor = "localhost";
-$usuario = "root";   // padrão do XAMPP
-$senha = "";         // padrão é vazio
-$banco = "raiz_saude";
 
-// Criando a conexão
-$conn = new mysqli($servidor, $usuario, $senha, $banco);
+require_once __DIR__ . "/config.php";
 
-// Checando se deu certo
+/*
+  Criando a conexão com o banco
+*/
+$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+/*
+  Verificando erro de conexão
+*/
 if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
-} else {
-   ;
+    die("Falha na conexão com o banco de dados.");
 }
-?>
- 
+
+/*
+  Define charset (evita problema com acentos)
+*/
+$conn->set_charset("utf8");
