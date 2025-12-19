@@ -6,7 +6,6 @@ Este projeto é a evolução do site estático original [Raízes da Saúde](http
 - Cadastro e login de usuários
 - Agendamento de consultas
 - Listagem e gerenciamento de dados de pacientes
-- Proteção de credenciais sensíveis usando `.gitignore`
 - Upload de arquivos (como fotos de perfil)
 - Controle de acessos para usuários e administradores
 - Relatórios básicos de histórico de agendamentos
