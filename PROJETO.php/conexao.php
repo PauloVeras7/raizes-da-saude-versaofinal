@@ -1,17 +1,10 @@
 <?php
-$servidor = "localhost";
-$usuario = "root";   // padrão do XAMPP
-$senha = "";         // padrão é vazio
-$banco = "raiz_saude";
+require_once "config.php";
 
-// Criando a conexão
-$conn = new mysqli($servidor, $usuario, $senha, $banco);
+$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-// Checando se deu certo
 if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
-} else {
-   ;
+    die("Falha na conexão com o banco de dados.");
 }
-?>
- 
+
+$conn->set_charset("utf8");
